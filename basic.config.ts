@@ -5,15 +5,49 @@
 export const schema = {
   "project_id": "c64278ad-7e9f-4fed-bf14-5af221796833",
   "tables": {
-    "location": {
+    "places": {
       "type": "collection",
       "fields": {
-        "coordinates": {
+        "name": {
+          "type": "string",
+          "indexed": true
+        },
+        "lat": {
+          "type": "number",
+          "indexed": true
+        },
+        "long": {
+          "type": "number",
+          "indexed": true
+        }
+      }
+    },
+    "log": {
+      "type": "collection",
+      "fields": {
+        "lat": {
+          "type": "number",
+          "indexed": true
+        },
+        "long": {
+          "type": "number",
+          "indexed": true
+        }
+      }
+    },
+    "friends": {
+      "type": "collection",
+      "fields": {
+        "token": {
+          "type": "string",
+          "indexed": true
+        },
+        "name": {
           "type": "string",
           "indexed": true
         }
       }
     }
   },
-  version: 1,
+  "version": 1
 }
